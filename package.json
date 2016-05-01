@@ -1,0 +1,26 @@
+{
+  "name": "travel2gether-frontend",
+  "version": "1.0.0",
+  "description": "travel with friends!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kopasetik/travel2gether-frontend.git"
+  },
+  "keywords": [
+    "travel",
+    "friendship"
+  ],
+  "author": "team travel2gether",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kopasetik/travel2gether-frontend/issues"
+  },
+  "homepage": "https://github.com/kopasetik/travel2gether-frontend#readme",
+  "dependencies": {
+    "pug": "^2.0.0-alpha6"
+  }
+}
