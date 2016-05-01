@@ -1,74 +1,72 @@
-// Page Content
-.container-fluid.text-white.trip-header(style="background:linear-gradient(to bottom, rgba(0,0,0,0.55) ,rgba(0,0,0,0.55) , rgba(0,0,0,0.55)), url('http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/3/top-10-caribbean-beaches-eagle-beach-aruba.jpg.rend.tccom.1280.960.jpeg') no-repeat center center !important; background-size:cover !important;")
-  .row
-    .col-md-12
-      h1(style='text-transform: uppercase;') Trip Name
-    .col-md-6.col-md-offset-3.profile-imgs.float-right
-      p On the trip:
-      img.float-right(src='http://www.fillmurray.com/g/200/200')
-      img.float-right(src='http://www.fillmurray.com/g/200/200')
-      img.float-right(src='http://www.fillmurray.com/g/200/200')
-      img.float-right(src='http://www.fillmurray.com/g/200/200')
-.container-fluid
-  .row.tri-column.border-bottom
-    .col-xs-4.border-right
-      h3 # of Cities
-      p 21
-    .col-xs-4.border-right
-      h3 Target Price:
-      p $400
-    .col-xs-4
-      h3 # of People:
-      p 4
-    .col-xs-6
-      h3 Begin Trip Search:
-      p May 21st
-    .col-xs-6
-      h3 End Trip Search:
-      p June 15th
-.container
-  .row.timeline
-    .col-xs-2
-      .profile-imgs(style='padding-top: 10px;')
-        img.float-right(src='http://www.fillmurray.com/g/200/200')
-    .col-xs-10
-      p.bubble-person
-        i Jessica says:
-      .bubble
-        .bubble-text
-          p Is everyone ok with $350 a person?
-  .row.timeline
-    .col-xs-2
-      .profile-imgs(style='padding-top: 10px;')
-        img.float-right(src='http://www.fillmurray.com/g/200/200')
-    .col-xs-10
-      p.bubble-person
-        i Jessica says:
-      .bubble
-        .bubble-text
-          p No! I can't pay that much
-  .row.timeline
-    .col-xs-2
-      .profile-imgs(style='padding-top: 10px;')
-        img.float-right(src='http://www.fillmurray.com/g/200/200')
-    .col-xs-10
-      p.bubble-person
-        i Jessica says:
-      .bubble
-        .bubble-text
-          p No! I can't pay that much
-  .row.timeline
-    .col-xs-2
-      .profile-imgs(style='padding-top: 10px;')
-        img.float-right(src='http://www.fillmurray.com/g/200/200')
-    .col-xs-10
-      p.bubble-person
-        i Jessica says:
-      .bubble
-        .bubble-text
-          p No! I can't pay that much
-.container-fluid.fixed-bottom
-  .col-xs-6.left-fixed
-    a(href='#') TEST
-  .col-xs-6.right-fixed
-    a(href='#') TEST
+.controller-div(ng-controller="TripPageCtrl")
+  // Page Content
+  .container-fluid.text-white.trip-header(style="background:linear-gradient(to bottom, rgba(0,0,0,0.55) ,rgba(0,0,0,0.55) , rgba(0,0,0,0.55)), url('http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/3/top-10-caribbean-beaches-eagle-beach-aruba.jpg.rend.tccom.1280.960.jpeg') no-repeat center center !important; background-size:cover !important;")
+    .row
+      .col-md-12
+        h1(style='text-transform: uppercase;') {{searchResults.name}}
+      .col-md-6.col-md-offset-3.profile-imgs.float-right
+        p On the trip:
+        img.float-right(src='http://www.fillmurray.com/g/200/200', ng-repeat="person in people")
+  .container-fluid
+    .row.tri-column.border-bottom
+      .col-xs-4.border-right
+        h3 Monitoring
+        p {{searchResults.city.length}} Cities
+      .col-xs-4.border-right
+        h3 Target Price:
+        p ${{searchResults.maxPrice/(searchResults.users.length)}}
+      .col-xs-4
+        h3 # of People:
+        p {{searchResults.users.length}}
+      .col-xs-6
+        h3 Begin Trip:
+        p {{searchResults.departDate | date: longDate}}
+      .col-xs-6
+        h3 End Trip:
+        p {{searchResults.returnDate | date: longDate }}
+  .container
+    .row.timeline
+      .col-xs-2
+        .profile-imgs(style='padding-top: 10px;')
+          img.float-right(src='http://www.fillmurray.com/g/200/200')
+      .col-xs-10
+        p.bubble-person
+          i Jessica says:
+        .bubble
+          .bubble-text
+            p Is everyone ok with $350 a person?
+    .row.timeline
+      .col-xs-2
+        .profile-imgs(style='padding-top: 10px;')
+          img.float-right(src='http://www.fillmurray.com/g/200/200')
+      .col-xs-10
+        p.bubble-person
+          i Jessica says:
+        .bubble
+          .bubble-text
+            p No! I can't pay that much
+    .row.timeline
+      .col-xs-2
+        .profile-imgs(style='padding-top: 10px;')
+          img.float-right(src='http://www.fillmurray.com/g/200/200')
+      .col-xs-10
+        p.bubble-person
+          i Jessica says:
+        .bubble
+          .bubble-text
+            p No! I can't pay that much
+    .row.timeline
+      .col-xs-2
+        .profile-imgs(style='padding-top: 10px;')
+          img.float-right(src='http://www.fillmurray.com/g/200/200')
+      .col-xs-10
+        p.bubble-person
+          i Jessica says:
+        .bubble
+          .bubble-text
+            p No! I can't pay that much
+  .container-fluid.fixed-bottom
+    .col-xs-6.left-fixed
+      a(href='./#!/') TEST
+    .col-xs-6.right-fixed
+      a(href='./#!/') TEST

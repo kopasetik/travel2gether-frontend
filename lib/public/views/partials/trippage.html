@@ -1,94 +1,96 @@
 
-<!-- Page Content-->
-<div class="container-fluid text-white trip-header" style="background:linear-gradient(to bottom, rgba(0,0,0,0.55) ,rgba(0,0,0,0.55) , rgba(0,0,0,0.55)), url('http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/3/top-10-caribbean-beaches-eagle-beach-aruba.jpg.rend.tccom.1280.960.jpeg') no-repeat center center !important; background-size:cover !important">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 style="text-transform: uppercase">Trip Name</h1>
-    </div>
-    <div class="col-md-6 col-md-offset-3 profile-imgs float-right">
-      <p>On the trip:</p><img class="float-right" src="http://www.fillmurray.com/g/200/200"/><img class="float-right" src="http://www.fillmurray.com/g/200/200"/><img class="float-right" src="http://www.fillmurray.com/g/200/200"/><img class="float-right" src="http://www.fillmurray.com/g/200/200"/>
-    </div>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="row tri-column border-bottom">
-    <div class="col-xs-4 border-right">
-      <h3># of Cities</h3>
-      <p>21</p>
-    </div>
-    <div class="col-xs-4 border-right">
-      <h3>Target Price:</h3>
-      <p>$400</p>
-    </div>
-    <div class="col-xs-4">
-      <h3># of People:</h3>
-      <p>4</p>
-    </div>
-    <div class="col-xs-6">
-      <h3>Begin Trip Search:</h3>
-      <p>May 21st</p>
-    </div>
-    <div class="col-xs-6">
-      <h3>End Trip Search:</h3>
-      <p>June 15th</p>
+<div class="controller-div" ng-controller="TripPageCtrl">
+  <!-- Page Content-->
+  <div class="container-fluid text-white trip-header" style="background:linear-gradient(to bottom, rgba(0,0,0,0.55) ,rgba(0,0,0,0.55) , rgba(0,0,0,0.55)), url('http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/3/top-10-caribbean-beaches-eagle-beach-aruba.jpg.rend.tccom.1280.960.jpeg') no-repeat center center !important; background-size:cover !important">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="text-transform: uppercase">{{searchResults.name}}</h1>
+      </div>
+      <div class="col-md-6 col-md-offset-3 profile-imgs float-right">
+        <p>On the trip:</p><img class="float-right" src="http://www.fillmurray.com/g/200/200" ng-repeat="person in people"/>
+      </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="row timeline">
-    <div class="col-xs-2">
-      <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+  <div class="container-fluid">
+    <div class="row tri-column border-bottom">
+      <div class="col-xs-4 border-right">
+        <h3>Monitoring</h3>
+        <p>{{searchResults.city.length}} Cities</p>
+      </div>
+      <div class="col-xs-4 border-right">
+        <h3>Target Price:</h3>
+        <p>${{searchResults.maxPrice/(searchResults.users.length)}}</p>
+      </div>
+      <div class="col-xs-4">
+        <h3># of People:</h3>
+        <p>{{searchResults.users.length}}</p>
+      </div>
+      <div class="col-xs-6">
+        <h3>Begin Trip:</h3>
+        <p>{{searchResults.departDate | date: longDate}}</p>
+      </div>
+      <div class="col-xs-6">
+        <h3>End Trip:</h3>
+        <p>{{searchResults.returnDate | date: longDate }}</p>
+      </div>
     </div>
-    <div class="col-xs-10">
-      <p class="bubble-person"><i>Jessica says:</i></p>
-      <div class="bubble">
-        <div class="bubble-text">
-          <p>Is everyone ok with $350 a person?</p>
+  </div>
+  <div class="container">
+    <div class="row timeline">
+      <div class="col-xs-2">
+        <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+      </div>
+      <div class="col-xs-10">
+        <p class="bubble-person"><i>Jessica says:</i></p>
+        <div class="bubble">
+          <div class="bubble-text">
+            <p>Is everyone ok with $350 a person?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row timeline">
+      <div class="col-xs-2">
+        <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+      </div>
+      <div class="col-xs-10">
+        <p class="bubble-person"><i>Jessica says:</i></p>
+        <div class="bubble">
+          <div class="bubble-text">
+            <p>No! I can't pay that much</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row timeline">
+      <div class="col-xs-2">
+        <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+      </div>
+      <div class="col-xs-10">
+        <p class="bubble-person"><i>Jessica says:</i></p>
+        <div class="bubble">
+          <div class="bubble-text">
+            <p>No! I can't pay that much</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row timeline">
+      <div class="col-xs-2">
+        <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+      </div>
+      <div class="col-xs-10">
+        <p class="bubble-person"><i>Jessica says:</i></p>
+        <div class="bubble">
+          <div class="bubble-text">
+            <p>No! I can't pay that much</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row timeline">
-    <div class="col-xs-2">
-      <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
-    </div>
-    <div class="col-xs-10">
-      <p class="bubble-person"><i>Jessica says:</i></p>
-      <div class="bubble">
-        <div class="bubble-text">
-          <p>No! I can't pay that much</p>
-        </div>
-      </div>
-    </div>
+  <div class="container-fluid fixed-bottom">
+    <div class="col-xs-6 left-fixed"><a href="./#!/">TEST</a></div>
+    <div class="col-xs-6 right-fixed"><a href="./#!/">TEST</a></div>
   </div>
-  <div class="row timeline">
-    <div class="col-xs-2">
-      <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
-    </div>
-    <div class="col-xs-10">
-      <p class="bubble-person"><i>Jessica says:</i></p>
-      <div class="bubble">
-        <div class="bubble-text">
-          <p>No! I can't pay that much</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row timeline">
-    <div class="col-xs-2">
-      <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
-    </div>
-    <div class="col-xs-10">
-      <p class="bubble-person"><i>Jessica says:</i></p>
-      <div class="bubble">
-        <div class="bubble-text">
-          <p>No! I can't pay that much</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container-fluid fixed-bottom">
-  <div class="col-xs-6 left-fixed"><a href="#">TEST</a></div>
-  <div class="col-xs-6 right-fixed"><a href="#">TEST</a></div>
 </div>
