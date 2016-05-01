@@ -176,12 +176,13 @@ p {
 ==================== */
 .tri-column {
   text-align: center;
+  border-bottom: 1px solid black;
 }
 .tri-column .border {
   border: 1px solid black;
 }
-.tri-column .border-right {
-  border-right: 1px solid black;
+.tri-column .border-top {
+  border-top: 1px solid black;
 }
 .tri-column h3 {
   font-size: 8pt;
@@ -201,7 +202,6 @@ p {
   padding: 5%;
 }
 .fixed-bottom {
-  position: fixed;
   bottom: 0;
   height: 50px;
   width: 100%;
