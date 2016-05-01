@@ -88,6 +88,19 @@
         </div>
       </div>
     </div>
+    <div class="row timeline" ng-if="hasHistory">
+      <div class="col-xs-2">
+        <div class="profile-imgs" style="padding-top: 10px"><img class="float-right" src="http://www.fillmurray.com/g/200/200"/></div>
+      </div>
+      <div class="col-xs-10">
+        <p class="bubble-person"><i>Computer says:</i></p>
+        <div class="bubble">
+          <div class="bubble-text">
+            <p>The last historical price was {{searchResults.priceHistory[0].price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="container-fluid fixed-bottom">
     <div class="col-xs-6 left-fixed"><a href="./#!/">TEST</a></div>

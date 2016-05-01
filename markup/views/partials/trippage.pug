@@ -65,6 +65,16 @@
         .bubble
           .bubble-text
             p No! I can't pay that much
+    .row.timeline(ng-if="hasHistory")
+      .col-xs-2
+        .profile-imgs(style='padding-top: 10px;')
+          img.float-right(src='http://www.fillmurray.com/g/200/200')
+      .col-xs-10
+        p.bubble-person
+          i Computer says:
+        .bubble
+          .bubble-text
+            p The last historical price was {{searchResults.priceHistory[0].price}}
   .container-fluid.fixed-bottom
     .col-xs-6.left-fixed
       a(href='./#!/') TEST
