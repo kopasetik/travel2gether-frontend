@@ -6,7 +6,7 @@
 ==================== */
 
 body {
-	padding-top: 50px;
+
 }
 
 h1, h2, h3, h4 {
@@ -30,7 +30,72 @@ p {
 	float: right;
 }
 
+.nav-icon {
+
+	background-color: @color-black;
+	border-bottom: 1px solid black;
+	color: @color-white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	img {
+		width: 50px;
+		height: 50px;
+		float: left;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-weight: 100;
+		font-size: 12pt;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		padding-left: 20px;
+		float: left;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font-family: @regular-font;
+		font-weight: 100;
+		font-size: 8pt;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		padding-left: 20px;
+		float: right;
+
+	}
+}
+
 // BUTTON CREATE
+
+.btn-travel-small{
+    box-sizing: border-box;
+    padding: 4px 11px;
+    border-radius: 0;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 100;
+    font-family: @regular-font;
+    transition: 0.15s;
+    &:hover{
+        cursor: pointer;
+        transition: 0.15s;
+    }
+
+    &.btn-dark{
+        border: 1px solid darken(@color-black, 5%);
+        background-color: @color-black;
+        &:hover{
+            background-color: darken(@color-black, 5%);
+            border: 1px solid darken(@color-black, 8%);
+            color: #fff;
+
+        }
+   }
+ }
 
 .btn-travel{
     box-sizing: border-box;
@@ -85,7 +150,15 @@ p {
 // CREATE TAGS
 
 .tags {
+	text-align: center;
 
+	a {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 8pt;
+		font-weight: 100;
+
+	}
 	span {
 	box-sizing: border-box;
     padding: 8px 22px;
@@ -95,8 +168,13 @@ p {
     letter-spacing: 1px;
     color: #FFF;
     font-weight: 100;
+    margin: 5px;
 	}
 	
+}
+
+.close-thik:after {
+  content: '  ✖'; /* UTF-8 symbol */
 }
 
 // CUSTOM NAVBAR 
@@ -314,6 +392,10 @@ border-radius: 10px;
 ===================== */
 
 .form-wrapper {
+
+	padding: 0;
+	margin: 0;
+
 	h3 {
 		font-size: 8pt;
 		text-transform: uppercase;
@@ -350,5 +432,25 @@ border-radius: 10px;
     opacity:0.5;
 	color:#996;
 	
+}
+
+.form-padding {
+	margin: 10px 0;
+}
+
+// STYLING INPUTS
+
+input[type="text"] {
+
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  font-family: @regular-font;
+
+}
+
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
 }
 

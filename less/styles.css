@@ -3,9 +3,6 @@
 /* MAIN BODY EDITS 
 ====================
 ==================== */
-body {
-  padding-top: 50px;
-}
 h1,
 h2,
 h3,
@@ -24,6 +21,62 @@ p {
 }
 .float-right {
   float: right;
+}
+.nav-icon {
+  background-color: #252525;
+  border-bottom: 1px solid black;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.nav-icon img {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.nav-icon h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 12pt;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  float: left;
+}
+.nav-icon h3 {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  float: right;
+}
+.btn-travel-small {
+  box-sizing: border-box;
+  padding: 4px 11px;
+  border-radius: 0;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  transition: 0.15s;
+}
+.btn-travel-small:hover {
+  cursor: pointer;
+  transition: 0.15s;
+}
+.btn-travel-small.btn-dark {
+  border: 1px solid #181818;
+  background-color: #252525;
+}
+.btn-travel-small.btn-dark:hover {
+  background-color: #181818;
+  border: 1px solid #111111;
+  color: #fff;
 }
 .btn-travel {
   box-sizing: border-box;
@@ -69,6 +122,15 @@ p {
   border: 1px solid #ff6039;
   color: #fff;
 }
+.tags {
+  text-align: center;
+}
+.tags a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 8pt;
+  font-weight: 100;
+}
 .tags span {
   box-sizing: border-box;
   padding: 8px 22px;
@@ -78,6 +140,11 @@ p {
   letter-spacing: 1px;
   color: #FFF;
   font-weight: 100;
+  margin: 5px;
+}
+.close-thik:after {
+  content: '  ✖';
+  /* UTF-8 symbol */
 }
 .navbar-custom {
   background-color: #fff;
@@ -246,6 +313,10 @@ p {
 }
 /* FORM PAGE STYLING
 ===================== */
+.form-wrapper {
+  padding: 0;
+  margin: 0;
+}
 .form-wrapper h3 {
   font-size: 8pt;
   text-transform: uppercase;
@@ -273,4 +344,17 @@ p {
 .check {
   opacity: 0.5;
   color: #996;
+}
+.form-padding {
+  margin: 10px 0;
+}
+input[type="text"] {
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  font-family: 'Lato', sans-serif;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
 }
