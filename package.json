@@ -4,7 +4,8 @@
   "description": "travel with friends!",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "build:markup": "pug --hierarchy -P markup -o lib/public/"
   },
   "repository": {
     "type": "git",
