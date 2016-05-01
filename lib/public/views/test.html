@@ -1,113 +1,125 @@
-<html>
+<!DOCTYPE html>
+<html class="ng-scope" id="top" lang="en" ng-app="uib.bootstrap.demo">
   <head>
+    <style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style>
+    <style type="text/css">.uib-time input{width:50px;}</style>
+    <style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style>
+    <style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style>
+    <style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style>
+    <style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style>
+    <style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style>
+    <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
     <meta charset="utf-8">
-    <title>Index page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="../../../less/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js"></script>
-    <!-- ui bootstrap without templates-->
-    <!-- script(src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap.js")-->
-    <!-- ui bootstrap with templates-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap-tpls.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
-    <script src="../js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Travel2gether</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.0.0/FileSaver.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.4.0/jszip.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.2.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/plunker.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/app.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//angular-ui.github.io/bootstrap/assets/rainbow.css">
+    <link rel="stylesheet" href="//angular-ui.github.io/bootstrap/assets/demo.css">
   </head>
-  <body ng-app="TravelTogether">
-    <header class="navbar navbar-inverse navbar-fixed-top navbar-inner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand visible-xs" href="#">UI Bootstrap</a>
-            </div>
-            <nav class="hidden-xs">
-                <ul class="nav navbar-nav">
-                    <a href="#top" role="button" class="navbar-brand">
-                        UI Bootstrap
-                    </a>
-                    <li class="dropdown" uib-dropdown="">
-                        <a role="button" class="dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
-                            Directives <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#accordion">Accordion</a></li><li><a href="#alert">Alert</a></li><li><a href="#buttons">Buttons</a></li><li><a href="#carousel">Carousel</a></li><li><a href="#collapse">Collapse</a></li><li><a href="#dateparser">Dateparser</a></li><li><a href="#datepicker">Datepicker</a></li><li><a href="#datepickerPopup">Datepicker Popup</a></li><li><a href="#dropdown">Dropdown</a></li><li><a href="#modal">Modal</a></li><li><a href="#pager">Pager</a></li><li><a href="#pagination">Pagination</a></li><li><a href="#popover">Popover</a></li><li><a href="#position">Position</a></li><li><a href="#progressbar">Progressbar</a></li><li><a href="#rating">Rating</a></li><li><a href="#tabs">Tabs</a></li><li><a href="#timepicker">Timepicker</a></li><li><a href="#tooltip">Tooltip</a></li><li><a href="#typeahead">Typeahead</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#getting_started">Getting started</a></li>
-                    <li class="dropdown" uib-dropdown="">
-                        <a role="button" class="dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
-                            Previous docs <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap" class="ng-binding" href="/bootstrap">Current</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.3.1" class="ng-binding" href="/bootstrap/versioned-docs/1.3.1">1.3.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.3.0" class="ng-binding" href="/bootstrap/versioned-docs/1.3.0">1.3.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.5" class="ng-binding" href="/bootstrap/versioned-docs/1.2.5">1.2.5</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.4" class="ng-binding" href="/bootstrap/versioned-docs/1.2.4">1.2.4</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.3" class="ng-binding" href="/bootstrap/versioned-docs/1.2.3">1.2.3</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.2" class="ng-binding" href="/bootstrap/versioned-docs/1.2.2">1.2.2</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.1" class="ng-binding" href="/bootstrap/versioned-docs/1.2.1">1.2.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.2.0" class="ng-binding" href="/bootstrap/versioned-docs/1.2.0">1.2.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.1.2" class="ng-binding" href="/bootstrap/versioned-docs/1.1.2">1.1.2</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.1.1" class="ng-binding" href="/bootstrap/versioned-docs/1.1.1">1.1.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.1.0" class="ng-binding" href="/bootstrap/versioned-docs/1.1.0">1.1.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.0.3" class="ng-binding" href="/bootstrap/versioned-docs/1.0.3">1.0.3</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.0.2" class="ng-binding" href="/bootstrap/versioned-docs/1.0.2">1.0.2</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.0.1" class="ng-binding" href="/bootstrap/versioned-docs/1.0.1">1.0.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/1.0.0" class="ng-binding" href="/bootstrap/versioned-docs/1.0.0">1.0.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.14.3" class="ng-binding" href="/bootstrap/versioned-docs/0.14.3">0.14.3</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.14.2" class="ng-binding" href="/bootstrap/versioned-docs/0.14.2">0.14.2</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.14.1" class="ng-binding" href="/bootstrap/versioned-docs/0.14.1">0.14.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.14.0" class="ng-binding" href="/bootstrap/versioned-docs/0.14.0">0.14.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.13.4" class="ng-binding" href="/bootstrap/versioned-docs/0.13.4">0.13.4</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.13.3" class="ng-binding" href="/bootstrap/versioned-docs/0.13.3">0.13.3</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.13.2" class="ng-binding" href="/bootstrap/versioned-docs/0.13.2">0.13.2</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.13.1" class="ng-binding" href="/bootstrap/versioned-docs/0.13.1">0.13.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.13.0" class="ng-binding" href="/bootstrap/versioned-docs/0.13.0">0.13.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.12.1" class="ng-binding" href="/bootstrap/versioned-docs/0.12.1">0.12.1</a>
-                            </li><!-- end ngRepeat: version in oldDocs --><li ng-repeat="version in oldDocs" class="ng-scope">
-                                <a ng-href="/bootstrap/versioned-docs/0.12.0" class="ng-binding" href="/bootstrap/versioned-docs/0.12.0">0.12.0</a>
-                            </li><!-- end ngRepeat: version in oldDocs -->
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="visible-xs collapse" uib-collapse="!isCollapsed" style="height: 0px;">
-                <ul class="nav navbar-nav">
-                    <li><a href="#getting_started" ng-click="isCollapsed = !isCollapsed">Getting started</a></li>
-                    <li><a href="#directives_small" ng-click="isCollapsed = !isCollapsed">Directives</a></li>
-                </ul>
-            </nav>
+  <body class="ng-scope" ng-controller="MainCtrl">
+    <header class="navbar navbar-default navbar-fixed-top navbar-inner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand visible-xs" href="#">UI Bootstrap</a>
         </div>
+        <nav class="hidden-xs">
+          <ul class="nav navbar-nav"><a class="navbar-brand" href="#top" role="button">UI Bootstrap</a>
+            <li class="dropdown" uib-dropdown=""><a class="dropdown-toggle" role="button" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">Directives<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#accordion">Accordion</a></li>
+              </ul>
+            </li>
+            <li><a href="#getting_started">Getting started</a></li>
+            <li class="dropdown" uib-dropdown=""><a class="dropdown-toggle" role="button" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">Previous docs<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <!-- ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap" href="/bootstrap">Current</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.3.1" href="/bootstrap/versioned-docs/1.3.1">1.3.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.3.0" href="/bootstrap/versioned-docs/1.3.0">1.3.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.5" href="/bootstrap/versioned-docs/1.2.5">1.2.5</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.4" href="/bootstrap/versioned-docs/1.2.4">1.2.4</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.3" href="/bootstrap/versioned-docs/1.2.3">1.2.3</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.2" href="/bootstrap/versioned-docs/1.2.2">1.2.2</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.1" href="/bootstrap/versioned-docs/1.2.1">1.2.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.2.0" href="/bootstrap/versioned-docs/1.2.0">1.2.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.1.2" href="/bootstrap/versioned-docs/1.1.2">1.1.2</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.1.1" href="/bootstrap/versioned-docs/1.1.1">1.1.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.1.0" href="/bootstrap/versioned-docs/1.1.0">1.1.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.0.3" href="/bootstrap/versioned-docs/1.0.3">1.0.3</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.0.2" href="/bootstrap/versioned-docs/1.0.2">1.0.2</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.0.1" href="/bootstrap/versioned-docs/1.0.1">1.0.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/1.0.0" href="/bootstrap/versioned-docs/1.0.0">1.0.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.14.3" href="/bootstrap/versioned-docs/0.14.3">0.14.3</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.14.2" href="/bootstrap/versioned-docs/0.14.2">0.14.2</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.14.1" href="/bootstrap/versioned-docs/0.14.1">0.14.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.14.0" href="/bootstrap/versioned-docs/0.14.0">0.14.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.13.4" href="/bootstrap/versioned-docs/0.13.4">0.13.4</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.13.3" href="/bootstrap/versioned-docs/0.13.3">0.13.3</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.13.2" href="/bootstrap/versioned-docs/0.13.2">0.13.2</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.13.1" href="/bootstrap/versioned-docs/0.13.1">0.13.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.13.0" href="/bootstrap/versioned-docs/0.13.0">0.13.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.12.1" href="/bootstrap/versioned-docs/0.12.1">0.12.1</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+                <li class="ng-scope" ng-repeat="version in oldDocs"><a class="ng-binding" ng-href="/bootstrap/versioned-docs/0.12.0" href="/bootstrap/versioned-docs/0.12.0">0.12.0</a></li>
+                <!-- end ngRepeat: version in oldDocs-->
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav class="visible-xs collapse" uib-collapse="!isCollapsed" aria-expanded="false" aria-hidden="true" style="height: 0px">
+          <ul class="nav navbar-nav">
+            <li><a href="#getting_started" ng-click="isCollapsed = !isCollapsed">Getting started</a></li>
+            <li><a href="#directives_small" ng-click="isCollapsed = !isCollapsed">Directives</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <div class="header-placeholder"></div>
+    <div role="main">
+      <!-- /.container-->
+    </div>
+    <!-- /.main-->
+    <script src="//angular-ui.github.io/bootstrap/assets/rainbow.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/rainbow-generic.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/rainbow-javascript.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/rainbow-html.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/smoothscroll-angular-custom.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/assets/uglifyjs.js" gapi_processed="true"></script>
+  </body>
+</html>
