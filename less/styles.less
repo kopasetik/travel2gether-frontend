@@ -1,0 +1,124 @@
+@import "variables.less";
+
+body {
+	padding-top: 50px;
+}
+
+h1, h2, h3, h4 {
+	font-family: @header-font;
+}
+
+p {
+	font-family: @regular-font;
+	font-weight: 100;
+}
+
+.trip-header {
+	text-align: center;
+}
+
+.text-white {
+	color: @color-white;
+}
+
+.float-right {
+	float: right;
+}
+.profile-imgs {
+	text-align: center;
+
+	img {
+		display: block;
+		margin: 5px auto;
+		border-radius: 150px;
+		-webkit-border-radius: 150px;
+		-moz-border-radius: 150px;
+		width: 30px;
+		height: 30px;
+
+	}
+}
+
+.tri-column {
+	text-align: center;
+
+	.col-xs-4 {
+		border: 1px solid @color-black;
+	}
+
+	h3 {
+		font-size: 8pt;
+		text-transform: uppercase;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+	}
+
+	p {
+		font-size: 14pt;
+		color: @color-orange;
+		font-weight: 400;
+	}
+}
+
+.timeline {
+	padding: 10px;
+
+	.comment {
+		padding: 5%;
+	}
+}
+
+.fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+	a {
+			color: @color-white;
+
+
+		}
+
+	.left-fixed {
+
+		text-align: center;
+		background-color: @color-black;
+		padding: 5%;
+
+	
+	}
+
+	.right-fixed {
+
+		text-align: center;
+		background-color: @color-orange;
+		padding: 5%;
+		
+
+	}
+}
+
+.bubble 
+{
+position: relative;
+width: 250px;
+height: 100%;
+padding: 0px;
+background: #2c3e50;
+color: white;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble-person {
+	line-height: 1px;
+}
+
+.bubble-text {
+	padding: 5%;
+}
